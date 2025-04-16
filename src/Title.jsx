@@ -1,13 +1,15 @@
-function Title(){
+function Title({name, paragraph, color}){
 
-    let name="Daniel Lopes"
+    
     return (
     <div>
     
-    <h1>My first title in React :D and my name is {name}</h1>
+    <h1 style={{color:color}}>My first title in React :D and my name is {name ? name : "Carlucho"} </h1>
+    {paragraph ?
     <p>Im trying to make an paragraph inside my function Title and with a variable let or cons to try something out </p>
-        
-        </div>)
+        :
+        <p>Hello World</p>}
+    </div>)
 }
 
 export default Title

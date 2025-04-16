@@ -7,8 +7,8 @@ function App(){
 
   return (
   <div>
-  <Title />
-  <Title />
+  <Title name="Daniel Lopes" paragraph={true} color="green" />
+  <Title color="purple"/>
   <Title />
   <Title />
   
