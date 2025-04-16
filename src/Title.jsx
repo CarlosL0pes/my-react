@@ -1,14 +1,23 @@
-function Title({name, paragraph, color}){
+import { useState } from "react";
 
-    
+
+function Title({color}){
+    const[text,setText] = useState("My first title in the beggining of the state")
+    const [inputText,setInputText] = useState("");
+
+
+function clicked(){
+    setText(inputText);
+}
+
+
+
     return (
     <div>
     
-    <h1 style={{color:color}}>My first title in React :D and my name is {name ? name : "Carlucho"} </h1>
-    {paragraph ?
-    <p>Im trying to make an paragraph inside my function Title and with a variable let or cons to try something out </p>
-        :
-        <p>Hello World</p>}
+    <h1 style={{color:color}}>{text}</h1>
+    <input value={inputText} onChange={(e) =>{setInputText(e.target.value)}}type="text" />
+    <button onClick={clicked}>Change</button>
     </div>)
 }
 
